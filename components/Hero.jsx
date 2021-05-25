@@ -18,10 +18,8 @@ const Hero = () => {
             display: grid;
             grid-template-rows: repeat(4, 1fr);
             height: 66.7rem;
-             {
-              /* width: 100vw; */
-            }
-            padding: 3.5rem auto;
+            padding: 2rem;
+            width: 100vw;
           }
 
           .Header__title-container {
