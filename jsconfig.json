@@ -2,13 +2,15 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["components/*"],
-      "@images/*": [
-        "static/assets/images/*"
+      "@components/*": [
+        "components/*"
       ],
-      "@icons/*": [
-        "static/assets/icons/*"
-      ]
+      // "@images/*": [
+      //   "public/images/*"
+      // ],
+      // "@icons/*": [
+      //   "public/icons/*"
+      // ]
     }
   }
 }
