@@ -7,7 +7,7 @@ const MainSection = () => {
         <picture>
           <source
             media="(min-width:1000px)"
-            srcset="/images/desktop/image-interactive.jpg"
+            srcSet="/images/desktop/image-interactive.jpg"
           />
           <img src="/images/mobile/image-interactive.jpg" alt="interactive" />
         </picture>
@@ -21,20 +21,31 @@ const MainSection = () => {
           experiences that bind to their brand
         </p>
       </section>
-      <section></section>
       <style jsx>{`
         .Main {
+          display: grid;
+          row-gap: 4rem;
           padding-inline: var(--padding-inline-mobile);
+          padding-block-start: 9.6rem;
+          padding-block-end: 8.6rem;
           color: var(--very-dark-gray);
+          text-align: center;
         }
 
         .Main > section :nth-child(2) {
           padding-inline: 2.8rem;
+          display: grid;
+          row-gap: 2.4rem;
         }
 
         .Main__title {
           font-family: "Josefin Sans", sans-serif;
-          font-size: 3rem;
+          font-size: 3.2rem;
+          color: var(--black);
+        }
+
+        .Main__description {
+          line-height: 2.5rem;
         }
       `}</style>
     </main>

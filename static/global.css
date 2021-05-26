@@ -9,7 +9,7 @@
   --desktop-breakpoint: 1000px;
 
   /* General Pading */
-  --padding-inline-mobile: clamp(2rem, 5%, 16.2rem);
+  --padding-inline-mobile: clamp(2.4rem, 5%, 16.2rem);
 }
 
 * {
