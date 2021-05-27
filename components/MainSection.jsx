@@ -49,7 +49,6 @@ const MainSection = () => {
             row-gap: 0px;
             grid-template-columns: repeat(4, 1fr);
             column-gap: 3rem;
-            text-align: left;
           }
 
           .Main__photo {
@@ -63,7 +62,7 @@ const MainSection = () => {
             grid-row: 3 / 6;
             grid-column: 3 / 5;
             padding-block: 20%;
-            padding-inline-start: 20%;
+            padding-inline-start: 18%;
             margin-block: 2%;
           }
         }

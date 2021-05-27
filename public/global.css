@@ -54,8 +54,18 @@ h2 {
   justify-items: center;
 }
 
-@media (min-width: 1110) {
+@media (min-width: 1110px) {
   :root {
     --padding-inline-mobile: 0;
+  }
+
+  body {
+    text-align: left;
+  }
+
+  h2 {
+    font-size: 5rem;
+    font-weight: 300;
+    color: var(--black);
   }
 }

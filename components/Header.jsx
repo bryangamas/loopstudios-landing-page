@@ -3,9 +3,11 @@ import React from "react";
 const Header = () => {
   return (
     <header className="Header">
-      <figure className="Header__logo">
-        <img src="/images/logo.svg" alt="loopstudios logo" />
-      </figure>
+      <a href="#">
+        <picture className="Header__logo">
+          <img src="/images/logo.svg" alt="loopstudios logo" />
+        </picture>
+      </a>
       <i className="Header__menu-icon" />
       <style jsx>{`
         .Header {
@@ -26,12 +28,16 @@ const Header = () => {
           width: 24px;
           height: 16px;
           justify-self: end;
+          cursor: pointer;
         }
 
         @media (min-width: 1110px) {
           .Header {
             grid-row: 1/ 3;
             align-self: center;
+          }
+          .Header__logo {
+            width: 19.2rem;
           }
         }
       `}</style>

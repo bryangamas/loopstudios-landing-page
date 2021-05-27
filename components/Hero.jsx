@@ -18,15 +18,16 @@ const Hero = () => {
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            height: 66.7rem;
             padding-block: 3.5rem;
             padding-inline: var(--padding-inline-mobile);
             width: 100%;
+            height: 66.7rem;
           }
 
           .Hero__content {
             display: grid;
             grid-template-rows: repeat(4, 1fr);
+            height: 100%;
           }
 
           .background-shadow {
@@ -95,7 +96,7 @@ const Hero = () => {
               margin-block: 6.3rem;
               justify-self: left;
               align-items: center;
-              padding-inline: 4.5rem;
+              padding-inline: 4.2rem;
               width: 65.6rem;
               height: 28rem;
             }
