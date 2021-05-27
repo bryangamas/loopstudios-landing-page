@@ -11,11 +11,17 @@ const CreationsSection = () => {
           return <CreationItem key={item.id} mobile={item} index={index} />;
         })}
       </div>
+
+      <a href="#" className="CreationsSection__button">
+        SEE ALL
+      </a>
+
       <style jsx>
         {`
           .CreationsSection {
+            display: grid;
             padding-inline: var(--padding-inline-mobile);
-            padding-block-end: 2.3rem;
+            padding-block-end: 9.5rem;
           }
 
           .Creations-container {
@@ -27,6 +33,19 @@ const CreationsSection = () => {
 
           .CreationsSection__title {
             margin-block-end: 5.4rem;
+          }
+
+          .CreationsSection__button {
+            justify-self: center;
+            display: flex;
+            align-items: center;
+            height: 4.1rem;
+            width: 16rem;
+            margin-block-start: 3.5rem;
+            border: solid 1px black;
+            justify-content: center;
+            letter-spacing: 0.5rem;
+            font-weight: bold;
           }
 
           @media (min-width: 1000px) {

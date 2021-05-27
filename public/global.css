@@ -37,6 +37,12 @@ picture {
   display: block;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
 h2 {
   font-family: "Josefin Sans", sans-serif;
   font-size: 3.2rem;
