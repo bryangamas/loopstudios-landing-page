@@ -13,7 +13,6 @@ const Header = () => {
           grid-template-columns: repeat(2, 1fr);
           height: 3.5rem;
           align-items: center;
-          column-gap: 10%;
         }
 
         .Header__logo {
@@ -27,6 +26,13 @@ const Header = () => {
           width: 24px;
           height: 16px;
           justify-self: end;
+        }
+
+        @media (min-width: 1110px) {
+          .Header {
+            grid-row: 1/ 3;
+            align-self: center;
+          }
         }
       `}</style>
     </header>

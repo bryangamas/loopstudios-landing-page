@@ -3,16 +3,16 @@ import React from "react";
 const MainSection = () => {
   return (
     <main className="Main">
-      <section>
+      <section className="Main__photo">
         <picture>
           <source
-            media="(min-width:1000px)"
+            media="(min-width:1110px)"
             srcSet="/images/desktop/image-interactive.jpg"
           />
           <img src="/images/mobile/image-interactive.jpg" alt="interactive" />
         </picture>
       </section>
-      <section>
+      <section className="Main__text">
         <h2>THE LEADER IN INTERACTIVE VR</h2>
         <p className="Main__description">
           Founded in 2011, Loopstudios has been producing world-class virtual
@@ -26,12 +26,13 @@ const MainSection = () => {
           display: grid;
           row-gap: 4.8rem;
           padding-inline: var(--padding-inline-mobile);
+          max-width: 1110px;
           padding-block-start: 9.6rem;
           padding-block-end: 9.8rem;
           color: var(--dark-gray);
         }
 
-        .Main > section :nth-child(2) {
+        .Main__text {
           padding-inline: 2.3rem;
           display: grid;
           row-gap: 1.5rem;
@@ -39,6 +40,32 @@ const MainSection = () => {
 
         .Main__description {
           line-height: 2.5rem;
+        }
+
+        @media (min-width: 1110px) {
+          .Main {
+            padding: 0px;
+            grid-template-rows: repeat(5, 1fr);
+            row-gap: 0px;
+            grid-template-columns: repeat(4, 1fr);
+            column-gap: 3rem;
+            text-align: left;
+          }
+
+          .Main__photo {
+            grid-row: 2 / 5;
+            grid-column: 1 / 4;
+            width: 73rem;
+          }
+
+          .Main__text {
+            background-color: var(--white);
+            grid-row: 3 / 6;
+            grid-column: 3 / 5;
+            padding-block: 20%;
+            padding-inline-start: 20%;
+            margin-block: 2%;
+          }
         }
       `}</style>
     </main>

@@ -6,7 +6,7 @@
   --very-dark-gray: hsl(0, 0%, 41%);
 
   /* Breakpoint */
-  --desktop-breakpoint: 1000px;
+  --desktop-breakpoint: 1110px;
 
   /* General Pading */
   --padding-inline-mobile: clamp(2.4rem, 5%, 16.2rem);
@@ -47,4 +47,15 @@ h2 {
   font-family: "Josefin Sans", sans-serif;
   font-size: 3.2rem;
   color: var(--very-dark-gray);
+}
+
+#__next {
+  display: grid;
+  justify-items: center;
+}
+
+@media (min-width: 1110) {
+  :root {
+    --padding-inline-mobile: 0;
+  }
 }

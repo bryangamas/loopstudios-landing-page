@@ -6,7 +6,7 @@ const CreationItem = ({ mobile, index }) => {
   return (
     <figure>
       <picture>
-        <source media="(min-width:1000px)" srcSet={desktop.src} />
+        <source media="(min-width:1110px)" srcSet={desktop.src} />
         <img src={mobile.src} alt={mobile.alt} />
         <div className="image-shadow"></div>
       </picture>
@@ -39,7 +39,7 @@ const CreationItem = ({ mobile, index }) => {
             z-index: 2;
           }
 
-          @media (min-width: 1000px) {
+          @media (min-width: 1110px) {
             .image-shadow {
               box-shadow: inset 0px -150px 80px rgba(0, 0, 0, 0.6);
             }

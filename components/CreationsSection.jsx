@@ -22,6 +22,7 @@ const CreationsSection = () => {
             display: grid;
             padding-inline: var(--padding-inline-mobile);
             padding-block-end: 9.5rem;
+            max-width: 1110px;
           }
 
           .Creations-container {
@@ -48,7 +49,7 @@ const CreationsSection = () => {
             font-weight: bold;
           }
 
-          @media (min-width: 1000px) {
+          @media (min-width: 1110px) {
             .Creations-container {
               grid-template-columns: repeat(4, 1fr);
               grid-template-rows: repeat(

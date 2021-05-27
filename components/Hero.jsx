@@ -4,10 +4,13 @@ import Header from "./Header";
 const Hero = () => {
   return (
     <div className="Hero">
-      <Header></Header>
-      <div className="Hero__title-container">
-        <h1 className="Hero__title">IMMERSIVE EXPERIENCES THAT DELIVER</h1>
+      <div className="Hero__content">
+        <Header></Header>
+        <div className="Hero__title-container">
+          <h1 className="Hero__title">IMMERSIVE EXPERIENCES THAT DELIVER</h1>
+        </div>
       </div>
+      <div className="background-shadow"></div>
       <style jsx>
         {`
           .Hero {
@@ -15,12 +18,20 @@ const Hero = () => {
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            display: inline-grid;
-            grid-template-rows: repeat(4, 1fr);
             height: 66.7rem;
-            padding: 3.5rem var(--padding-inline-mobile);
+            padding-block: 3.5rem;
+            padding-inline: var(--padding-inline-mobile);
+            width: 100%;
           }
 
+          .Hero__content {
+            display: grid;
+            grid-template-rows: repeat(4, 1fr);
+          }
+
+          .background-shadow {
+            display: none;
+          }
           .Hero__title-container {
             grid-row: 2 / 4;
             align-self: center;
@@ -54,6 +65,43 @@ const Hero = () => {
           @media (min-width: 700px) {
             .Hero {
               display: grid;
+            }
+          }
+
+          @media (min-width: 1110px) {
+            .Hero {
+              position: relative;
+              padding-block: 0;
+              background-image: url(/images/desktop/image-hero.jpg);
+              background-position-y: top;
+              height: auto;
+            }
+            .background-shadow {
+              display: block;
+              background-color: rgba(0, 0, 0, 0.32);
+              position: absolute;
+              height: 100%;
+              width: 100%;
+            }
+            .Hero__content {
+              grid-template-rows: repeat(8, 1fr);
+              z-index: 1;
+              justify-self: center;
+              width: 1110px;
+            }
+
+            .Hero__title-container {
+              grid-row: 3 / 8;
+              margin-block: 6.3rem;
+              justify-self: left;
+              align-items: center;
+              padding-inline: 4.5rem;
+              width: 65.6rem;
+              height: 28rem;
+            }
+
+            .Hero__title {
+              font-size: 7rem;
             }
           }
         `}
