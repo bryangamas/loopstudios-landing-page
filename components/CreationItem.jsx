@@ -23,7 +23,7 @@ const CreationItem = ({ mobile, index }) => {
             height: 100%;
             top: 0;
             left: 0;
-            box-shadow: inset 100px 0px 60px rgba(0, 0, 0, 0.5);
+            box-shadow: inset 100px 0px 60px rgba(0, 0, 0, 0.6);
             z-index: 1;
           }
 
