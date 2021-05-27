@@ -5,8 +5,8 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link rel="icon" type="image/png" href="/static/favicon-32x32.png" />
-          <link rel="stylesheet" href="/static/global.css" />
+          <link rel="icon" type="image/png" href="/favicon-32x32.png" />
+          <link rel="stylesheet" href="/global.css" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
             href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap"

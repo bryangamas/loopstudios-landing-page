@@ -5,12 +5,6 @@
       "@components/*": [
         "components/*"
       ],
-      // "@images/*": [
-      //   "public/images/*"
-      // ],
-      // "@icons/*": [
-      //   "public/icons/*"
-      // ]
     }
   }
 }
