@@ -31,8 +31,12 @@ const CreationsSection = () => {
 
           @media (min-width: 1000px) {
             .Creations-container {
-              grid-template-columns: repeat(2, 1fr);
-              grid-template-rows: repeat(${creationListMobile.length / 2}, 1fr);
+              grid-template-columns: repeat(4, 1fr);
+              grid-template-rows: repeat(
+                ${Math.ceil(creationListMobile.length / 4)},
+                1fr
+              );
+              column-gap: 2.3rem;
             }
           }
         `}

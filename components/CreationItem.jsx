@@ -31,12 +31,18 @@ const CreationItem = ({ mobile, index }) => {
             position: absolute;
             left: 2.2rem;
             bottom: 2.5rem;
-            width: 40%;
+            width: 45%;
             font-family: "Josefin Sans", sans-serif;
             font-size: 2.5rem;
             text-align: left;
             color: var(--white);
             z-index: 2;
+          }
+
+          @media (min-width: 1000px) {
+            .image-shadow {
+              box-shadow: inset 0px -150px 80px rgba(0, 0, 0, 0.6);
+            }
           }
         `}
       </style>
