@@ -13,6 +13,7 @@ const Header = () => {
           grid-template-columns: repeat(2, 1fr);
           height: 3.5rem;
           align-items: center;
+          column-gap: 10%;
         }
 
         .Header__logo {

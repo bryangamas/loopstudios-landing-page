@@ -13,7 +13,7 @@ const MainSection = () => {
         </picture>
       </section>
       <section>
-        <h2 className="Main__title">THE LEADER IN INTERACTIVE VR</h2>
+        <h2>THE LEADER IN INTERACTIVE VR</h2>
         <p className="Main__description">
           Founded in 2011, Loopstudios has been producing world-class virtual
           reality projects for some of the best companies around the globe. Our
@@ -27,21 +27,14 @@ const MainSection = () => {
           row-gap: 4rem;
           padding-inline: var(--padding-inline-mobile);
           padding-block-start: 9.6rem;
-          padding-block-end: 8.6rem;
+          padding-block-end: 10rem;
           color: var(--very-dark-gray);
-          text-align: center;
         }
 
         .Main > section :nth-child(2) {
           padding-inline: 2.8rem;
           display: grid;
           row-gap: 2.4rem;
-        }
-
-        .Main__title {
-          font-family: "Josefin Sans", sans-serif;
-          font-size: 3.2rem;
-          color: var(--black);
         }
 
         .Main__description {
