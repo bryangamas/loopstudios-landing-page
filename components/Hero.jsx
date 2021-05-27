@@ -30,17 +30,27 @@ const Hero = () => {
             align-items: center;
             height: 20rem;
             max-width: 65.6rem;
-            padding: 2rem 2.8rem;
+            padding: 2rem 1.5rem;
             border: 2px solid var(--white);
           }
 
           .Hero__title {
             color: var(--white);
             font-family: "Josefin Sans", sans-serif;
-            font-size: 4rem;
+            font-size: 3.2rem;
             font-weight: 200;
+            text-align: left;
           }
 
+          @media (min-width: 370px) {
+            .Hero__title {
+              font-size: 4rem;
+            }
+
+            .Hero__title-container {
+              padding: 2rem 2.5rem;
+            }
+          }
           @media (min-width: 700px) {
             .Hero {
               display: grid;

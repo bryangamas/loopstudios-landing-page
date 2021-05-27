@@ -17,7 +17,7 @@ const Header = () => {
         }
 
         .Header__logo {
-          width: 15.5rem;
+          width: 14.2rem;
         }
 
         .Header__menu-icon {

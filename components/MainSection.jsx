@@ -17,24 +17,24 @@ const MainSection = () => {
         <p className="Main__description">
           Founded in 2011, Loopstudios has been producing world-class virtual
           reality projects for some of the best companies around the globe. Our
-          award-wining creations have transformed businesses through digital
-          experiences that bind to their brand
+          award-winning creations have transformed businesses through digital
+          experiences that bind to their brand.
         </p>
       </section>
       <style jsx>{`
         .Main {
           display: grid;
-          row-gap: 4rem;
+          row-gap: 4.8rem;
           padding-inline: var(--padding-inline-mobile);
           padding-block-start: 9.6rem;
-          padding-block-end: 10rem;
-          color: var(--very-dark-gray);
+          padding-block-end: 9.8rem;
+          color: var(--dark-gray);
         }
 
         .Main > section :nth-child(2) {
-          padding-inline: 2.8rem;
+          padding-inline: 2.3rem;
           display: grid;
-          row-gap: 2.4rem;
+          row-gap: 1.5rem;
         }
 
         .Main__description {
