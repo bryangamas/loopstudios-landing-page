@@ -1,14 +1,20 @@
+import useMediaQuery from "hooks/useMediaQuery";
 import React from "react";
+import FullMenu from "./FullMenu";
+import HamburgerMenu from "./HamburgerMenu";
+import Link from "next/link";
 
 const Header = () => {
+  const isBreakpoint = useMediaQuery(1110);
+
   return (
     <header className="Header">
-      <a href="#">
+      <Link href="#">
         <picture className="Header__logo">
           <img src="/images/logo.svg" alt="loopstudios logo" />
         </picture>
-      </a>
-      <i className="Header__menu-icon" />
+      </Link>
+      {isBreakpoint ? <FullMenu /> : <HamburgerMenu />}
       <style jsx>{`
         .Header {
           display: grid;
@@ -19,15 +25,6 @@ const Header = () => {
 
         .Header__logo {
           width: 14.2rem;
-        }
-
-        .Header__menu-icon {
-          background-image: url("/icons/icon-hamburger.svg");
-          background-repeat: no-repeat;
-          background-size: cover;
-          width: 24px;
-          height: 16px;
-          justify-self: end;
           cursor: pointer;
         }
 

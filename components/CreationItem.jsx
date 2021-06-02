@@ -24,7 +24,6 @@ const CreationItem = ({ mobile, index }) => {
             top: 0;
             left: 0;
             box-shadow: inset 100px 0px 60px rgba(0, 0, 0, 0.6);
-            z-index: 1;
           }
 
           figurecaption {
@@ -36,7 +35,6 @@ const CreationItem = ({ mobile, index }) => {
             font-size: 2.5rem;
             text-align: left;
             color: var(--white);
-            z-index: 2;
           }
 
           @media (min-width: 1110px) {
