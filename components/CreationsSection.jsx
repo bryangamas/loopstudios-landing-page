@@ -1,5 +1,5 @@
 import React from "react";
-import { creationListMobile } from "../utils/creationList";
+import { creationListMobile } from "../utils/creationsList";
 import CreationItem from "./CreationItem";
 
 const CreationsSection = () => {

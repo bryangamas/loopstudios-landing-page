@@ -1,5 +1,5 @@
 import React from "react";
-import { creationListDesktop } from "utils/creationList";
+import { creationListDesktop } from "utils/creationsList";
 
 const CreationItem = ({ mobile, index }) => {
   const desktop = creationListDesktop[index];

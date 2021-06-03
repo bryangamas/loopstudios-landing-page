@@ -41,9 +41,11 @@ export const creationListMobile = [
   },
 ];
 
-export const creationListDesktop = creationListMobile.map(({ src, alt }) => {
-  return {
-    src: src.replace("/mobile/", "/desktop/"),
-    alt,
-  };
-});
+export const creationListDesktop = creationListMobile.map(
+  ({ src, ...others }) => {
+    return {
+      ...others,
+      src: src.replace("/mobile/", "/desktop/"),
+    };
+  }
+);
