@@ -43,6 +43,10 @@ a {
   cursor: pointer;
 }
 
+ul {
+  list-style: none;
+}
+
 h2 {
   font-family: "Josefin Sans", sans-serif;
   font-size: 3.2rem;

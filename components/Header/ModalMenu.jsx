@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
+import { upperMenuItemsList } from "utils/menuItemsList";
 
 const ModalContent = ({ onClose }) => {
   return (
@@ -12,11 +13,13 @@ const ModalContent = ({ onClose }) => {
       </div>
       <nav>
         <ul className="Modal__content">
-          <li>ABOUT</li>
-          <li>CAREERS</li>
-          <li>EVENTS</li>
-          <li>PRODUCTS</li>
-          <li>SUPPORT</li>
+          {upperMenuItemsList.map((item) => {
+            return (
+              <li key={item.id}>
+                <a href={item.href}>{item.title}</a>
+              </li>
+            );
+          })}
         </ul>
       </nav>
       <style jsx>{`
