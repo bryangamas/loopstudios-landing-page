@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { creationListMobile } from "../utils/creationsList";
 import CreationItem from "./CreationItem";
@@ -11,10 +12,9 @@ const CreationsSection = () => {
           return <CreationItem key={item.id} mobile={item} index={index} />;
         })}
       </div>
-
-      <a href="#" className="CreationsSection__button">
-        SEE ALL
-      </a>
+      <Link href="#">
+        <div className="CreationsSection__button">SEE ALL</div>
+      </Link>
 
       <style jsx>
         {`
@@ -47,6 +47,7 @@ const CreationsSection = () => {
             justify-content: center;
             letter-spacing: 0.5rem;
             font-weight: bold;
+            cursor: pointer;
           }
 
           @media (min-width: 1110px) {
