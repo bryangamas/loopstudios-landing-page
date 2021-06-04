@@ -23,6 +23,11 @@ const HamburgerMenu = () => {
           cursor: pointer;
         }
       `}</style>
+      <style jsx global>{`
+        body {
+          overflow: ${showModal ? "hidden" : "initial"};
+        }
+      `}</style>
     </>
   );
 };
