@@ -12,7 +12,7 @@ const Navigation = ({
       <ul className="Navigation__content">
         {(upper ? upperMenuItemsList : menuItemsList).map((item) => {
           return (
-            <li className="Navigation__item" key={item.id}>
+            <li key={item.id} className="Navigation__item">
               <Link href={item.href}>{item.title}</Link>
             </li>
           );
@@ -34,9 +34,7 @@ const Navigation = ({
         @media (min-width: 1110px) {
           .Navigation__content {
             flex-direction: row;
-          }
-          li {
-            margin-inline-start: 3rem;
+            gap: 3rem;
           }
         }
       `}</style>

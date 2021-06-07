@@ -18,9 +18,11 @@ const Footer = () => {
         <div className="Footer_info">
           <div className="Footer_redes">
             {socialMediaList.map((media) => (
-              <picture key={media.id} className="Footer_icon">
-                <img src={media.icon} alt={media.title} />
-              </picture>
+              <Link key={media.id} href="#">
+                <picture className="Footer_icon">
+                  <img src={media.icon} alt={media.title} />
+                </picture>
+              </Link>
             ))}
           </div>
           <div className="Footer_derechos">
@@ -30,9 +32,10 @@ const Footer = () => {
       </div>
       <style jsx>{`
         .Footer {
+          display: flex;
+          justify-content: center;
           background-color: black;
           padding-inline: var(--padding-inline-mobile);
-          height: 47.1rem;
           width: 100%;
           color: var(--white);
         }
@@ -40,11 +43,14 @@ const Footer = () => {
         .Footer__content {
           display: grid;
           grid-template-rows: repeat(3, 1fr);
-          justify-items: center;
-          height: 100%;
+          justify-content: center;
+          height: 47.1rem;
+          width: 100%;
+          max-width: 1110px;
         }
 
         .Footer__main {
+          margin: 0 auto;
           padding-block-start: 2.4rem;
           padding-block-end: 1.2rem;
           grid-row: 1 / 3;
@@ -81,12 +87,40 @@ const Footer = () => {
 
         .Footer_icon {
           display: inline-block;
-          width: 24px;
           margin-inline: 8px;
+          width: 24px;
+          cursor: pointer;
         }
 
         .Footer_derechos {
           color: var(--dark-gray);
+        }
+
+        @media (min-width: 1110px) {
+          .Footer__content > * {
+            margin: 0;
+            padding: 0;
+          }
+          .Footer__content {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+            height: 16rem;
+          }
+          .Footer__main {
+            justify-self: left;
+            justify-content: space-evenly;
+          }
+          .Footer__logo {
+            flex-grow: initial;
+          }
+          Footer :global(.Navigation) {
+            flex-grow: initial;
+          }
+          .Footer_info {
+            justify-self: right;
+            align-items: flex-end;
+            grid-row: initial;
+          }
         }
       `}</style>
     </footer>
