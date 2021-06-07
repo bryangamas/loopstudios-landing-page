@@ -3,15 +3,15 @@ import React from "react";
 
 const FullMenu = () => {
   return (
-    <>
+    <div className="FullMenu">
       <Navigation />
       <style jsx>{`
-        :global(.Navigation) {
+        .FullMenu :global(.Navigation) {
           display: flex;
           justify-content: flex-end;
         }
       `}</style>
-    </>
+    </div>
   );
 };
 

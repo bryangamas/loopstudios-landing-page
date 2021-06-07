@@ -1,9 +1,12 @@
-import useMediaQuery from "hooks/useMediaQuery";
 import Link from "next/link";
 import React from "react";
 import { menuItemsList, upperMenuItemsList } from "utils/menuItemsList";
 
-const Navigation = ({ upper = false }) => {
+const Navigation = ({
+  upper = false,
+  center = false,
+  largeFontSize = false,
+}) => {
   return (
     <nav className="Navigation">
       <ul className="Navigation__content">
@@ -20,20 +23,17 @@ const Navigation = ({ upper = false }) => {
           height: 100%;
           display: flex;
           flex-direction: column;
-          align-items: flex-start;
-          justify-content: space-around;
-          font-family: "Josefin Sans", sans-serif;
-          font-size: 2.5rem;
+          align-items: ${center ? "center" : "flex-start"};
+          justify-content: space-between;
+          font-family: ${upper ? '"Josefin Sans"' : '"Alata"'}, sans-serif;
+          font-size: ${largeFontSize ? "2.5rem" : "1.5rem"};
           font-weight: 300;
+          color: var(--white);
         }
 
         @media (min-width: 1110px) {
           .Navigation__content {
             flex-direction: row;
-            font-size: 1.8rem;
-            font-weight: bold;
-            font-family: "Josefin Sans", sans-serif;
-            color: var(--white);
           }
           li {
             margin-inline-start: 3rem;

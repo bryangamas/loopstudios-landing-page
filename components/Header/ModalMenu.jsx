@@ -11,23 +11,22 @@ const ModalContent = ({ onClose }) => {
         </picture>
         <i className="Modal__close" onClick={onClose} />
       </div>
-      <Navigation upper={true}></Navigation>
+      <Navigation upper largeFontSize></Navigation>
       <style jsx>{`
         .Modal {
           display: grid;
-          grid-template-rows: repeat(4, 1fr);
+          grid-template-rows: repeat(6, 1fr);
           position: fixed;
-          padding-block: 3.5rem;
           padding-inline: var(--padding-inline-mobile);
           height: 100vh;
           width: 100vw;
           background-color: #000;
-          color: white;
           min-width: 320px;
           z-index: 1;
         }
 
         .Modal__header {
+          padding-block-start: 3.5rem;
           display: grid;
           grid-template-columns: repeat(2, 1fr);
           align-items: center;
@@ -49,8 +48,8 @@ const ModalContent = ({ onClose }) => {
           cursor: pointer;
         }
 
-        :global(.Navigation) {
-          grid-row: 2 / 4;
+        .Modal > :global(.Navigation) {
+          grid-row: 3 / 5;
         }
       `}</style>
     </div>
