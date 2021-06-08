@@ -42,6 +42,15 @@ const CreationItem = ({ mobile, index }) => {
             .image-shadow {
               box-shadow: inset 0px -150px 80px rgba(0, 0, 0, 0.6);
             }
+
+            figure:hover picture {
+              opacity: 25%;
+            }
+
+            figure:hover figurecaption {
+              color: black;
+              font-weight: bold;
+            }
           }
         `}
       </style>

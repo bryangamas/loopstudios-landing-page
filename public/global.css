@@ -53,21 +53,6 @@ h2 {
   color: var(--very-dark-gray);
 }
 
-.underline {
-  position: relative;
-}
-
-.underline:hover::after {
-  content: "";
-  position: absolute;
-  height: 2px;
-  width: 24px;
-  top: 32px;
-  left: 50%;
-  transform: translate(-50%);
-  background-color: var(--white);
-}
-
 #__next {
   display: grid;
   justify-items: center;
@@ -86,5 +71,20 @@ h2 {
     font-size: 5rem;
     font-weight: 300;
     color: var(--black);
+  }
+
+  .underline {
+    position: relative;
+  }
+
+  .underline:hover::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 24px;
+    top: 32px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: var(--white);
   }
 }
