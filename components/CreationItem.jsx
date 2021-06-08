@@ -15,6 +15,7 @@ const CreationItem = ({ mobile, index }) => {
         {`
           figure {
             position: relative;
+            cursor: pointer;
           }
 
           .image-shadow {

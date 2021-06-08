@@ -7,12 +7,12 @@ const CreationsSection = () => {
   return (
     <section className="CreationsSection">
       <h2 className="CreationsSection__title">OUR CREATIONS</h2>
-      <div className="Creations-container">
+      <div className="Creations-container" id="CreationsList">
         {creationListMobile.map((item, index) => {
           return <CreationItem key={item.id} mobile={item} index={index} />;
         })}
       </div>
-      <Link href="#">
+      <Link href="#CreationsList">
         <div className="CreationsSection__button">SEE ALL</div>
       </Link>
 
@@ -51,7 +51,19 @@ const CreationsSection = () => {
           }
 
           @media (min-width: 1110px) {
+            .CreationsSection {
+              grid-template-columns: repeat(2, 1fr);
+            }
+
+            .CreationsSection__button {
+              grid-column: 2 / 3;
+              margin: 0;
+              justify-self: end;
+            }
+
             .Creations-container {
+              grid-column: 1 / 3;
+              grid-row: 2 / 3;
               grid-template-columns: repeat(4, 1fr);
               grid-template-rows: repeat(
                 ${Math.ceil(creationListMobile.length / 4)},
