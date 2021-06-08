@@ -13,7 +13,7 @@ const CreationsSection = () => {
         })}
       </div>
       <Link href="#CreationsSection">
-        <div className="CreationsSection__button">SEE ALL</div>
+        <a className="CreationsSection__button">SEE ALL</a>
       </Link>
 
       <style jsx>
