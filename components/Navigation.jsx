@@ -12,7 +12,7 @@ const Navigation = ({
       <ul className="Navigation__content">
         {(upper ? upperMenuItemsList : menuItemsList).map((item) => {
           return (
-            <li key={item.id} className="Navigation__item">
+            <li key={item.id} className="Navigation__item underline">
               <Link href={item.href}>{item.title}</Link>
             </li>
           );

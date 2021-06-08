@@ -19,7 +19,7 @@ const Footer = () => {
           <div className="Footer_redes">
             {socialMediaList.map((media) => (
               <Link key={media.id} href="#">
-                <picture className="Footer_icon">
+                <picture className="Footer_icon underline">
                   <img src={media.icon} alt={media.title} />
                 </picture>
               </Link>
