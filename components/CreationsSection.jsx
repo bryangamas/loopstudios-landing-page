@@ -5,14 +5,14 @@ import CreationItem from "./CreationItem";
 
 const CreationsSection = () => {
   return (
-    <section className="CreationsSection">
+    <section className="CreationsSection" id="CreationsSection">
       <h2 className="CreationsSection__title">OUR CREATIONS</h2>
-      <div className="Creations-container" id="CreationsList">
+      <div className="Creations-container">
         {creationListMobile.map((item, index) => {
           return <CreationItem key={item.id} mobile={item} index={index} />;
         })}
       </div>
-      <Link href="#CreationsList">
+      <Link href="#CreationsSection">
         <div className="CreationsSection__button">SEE ALL</div>
       </Link>
 
@@ -21,6 +21,7 @@ const CreationsSection = () => {
           .CreationsSection {
             display: grid;
             padding-inline: var(--padding-inline-mobile);
+            padding-block-start: 4rem;
             padding-block-end: 9.5rem;
             max-width: 1110px;
           }
@@ -59,6 +60,12 @@ const CreationsSection = () => {
               grid-column: 2 / 3;
               margin: 0;
               justify-self: end;
+            }
+
+            .CreationsSection__button:hover {
+              background-color: var(--black);
+              color: var(--white);
+              font-weight: 300;
             }
 
             .Creations-container {

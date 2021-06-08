@@ -28,7 +28,7 @@ const MainSection = () => {
           padding-inline: var(--padding-inline-mobile);
           max-width: 1110px;
           padding-block-start: 9.6rem;
-          padding-block-end: 9.8rem;
+          padding-block-end: 5.8rem;
           color: var(--dark-gray);
         }
 
