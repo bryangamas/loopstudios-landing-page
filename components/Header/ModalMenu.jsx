@@ -26,7 +26,7 @@ const ModalContent = ({ onClose }) => {
         }
 
         .Modal__header {
-          padding-block-start: 3.5rem;
+          margin-block-start: 3.5rem;
           display: grid;
           grid-template-columns: repeat(2, 1fr);
           align-items: center;
