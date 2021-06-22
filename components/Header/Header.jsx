@@ -1,6 +1,6 @@
 import useMediaQuery from "hooks/useMediaQuery";
 import React from "react";
-import FullMenu from "./FullMenu";
+import Navigation from "@components/Navigation";
 import HamburgerMenu from "./HamburgerMenu";
 import Link from "next/link";
 
@@ -14,11 +14,11 @@ const Header = () => {
           <img src="/images/logo.svg" alt="loopstudios logo" />
         </picture>
       </Link>
-      {isBreakpoint ? <FullMenu /> : <HamburgerMenu />}
+      {isBreakpoint ? <Navigation /> : <HamburgerMenu />}
       <style jsx>{`
         .Header {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
+          display: flex;
+          justify-content: space-between;
           height: 3.5rem;
           align-items: center;
         }
