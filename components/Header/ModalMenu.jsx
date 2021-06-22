@@ -2,9 +2,9 @@ import Navigation from "@components/Navigation";
 import { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 
-const ModalContent = ({ onClose }) => {
+const ModalContent = ({ onClose, show }) => {
   return (
-    <div className="Modal">
+    <div className={`Modal ${show ? "" : "hidden"}`}>
       <div className="Modal__header">
         <picture className="Modal__logo">
           <img src="/images/logo.svg" alt="loopstudios logo" />
@@ -23,6 +23,11 @@ const ModalContent = ({ onClose }) => {
           background-color: #000;
           min-width: 320px;
           z-index: 1;
+          transition: transform 0.8s;
+        }
+
+        .Modal.hidden {
+          transform: translate(-100vw);
         }
 
         .Modal__header {
@@ -63,9 +68,9 @@ const ModalMenu = ({ show, onClose }) => {
     setIsBrowser(true);
   }, []);
 
-  const modalContent = <ModalContent onClose={onClose} />;
+  const modalContent = <ModalContent onClose={onClose} show={show} />;
 
-  if (isBrowser && show) {
+  if (isBrowser) {
     return ReactDOM.createPortal(
       modalContent,
       document.getElementById("modal")
