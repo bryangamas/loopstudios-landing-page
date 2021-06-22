@@ -66,6 +66,8 @@ const CreationsSection = () => {
               background-color: var(--black);
               color: var(--white);
               font-weight: 300;
+              transition-property: background-color color;
+              transition-duration: 0.4s;
             }
 
             .Creations-container {

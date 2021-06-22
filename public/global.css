@@ -78,14 +78,19 @@ h2 {
     position: relative;
   }
 
-  .underline:hover::after {
+  .underline::after {
     content: "";
     position: absolute;
+    transform: translate(-50%) scaleX(0);
     height: 2px;
     width: 24px;
     top: 32px;
     left: 50%;
-    transform: translate(-50%);
     background-color: var(--white);
+  }
+
+  .underline:hover::after {
+    transform: translate(-50%) scaleX(1);
+    transition: transform 0.4s;
   }
 }

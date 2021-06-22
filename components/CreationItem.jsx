@@ -45,6 +45,7 @@ const CreationItem = ({ mobile, index }) => {
 
             figure:hover picture {
               opacity: 25%;
+              transition: opacity 0.4s;
             }
 
             figure:hover figurecaption {
