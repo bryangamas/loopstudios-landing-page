@@ -27,7 +27,7 @@ const ModalContent = ({ onClose, show }) => {
         }
 
         .Modal.hidden {
-          transform: translate(-100vw);
+          transform: translate(100vw);
         }
 
         .Modal__header {
